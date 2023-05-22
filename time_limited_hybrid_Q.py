@@ -6,7 +6,7 @@ J = np.loadtxt('J.txt')
 
 sampler = LeapHybridSampler()
 
-lim=3.328125
+lim=3.0
 outputname = "Outputs_tlim_"+str(lim)+".txt"
 out = open(outputname, 'a')
 
