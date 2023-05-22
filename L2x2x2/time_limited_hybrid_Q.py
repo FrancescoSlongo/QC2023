@@ -1,7 +1,7 @@
 from dwave.system import LeapHybridSampler
 import numpy as np
 
-for i in range(88):
+for i in range(13):
     print("Iteration = ", i)
     h = np.loadtxt('h.txt')
     J = np.loadtxt('J.txt')
