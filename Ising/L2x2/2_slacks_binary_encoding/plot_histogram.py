@@ -1,56 +1,52 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+set_configurations_spins = ['0110','1001','0100','1010','0011','0001','1110','1000','1101','0010','1011','0101','1100','0111','1111','0000']
+set_configurations_pairs = ['0000', '0101', '0110', '1001', '1100', '0011', '1010', '1111']
 
-unique_strings=['011110111001000010110101100001010000', '011111000111000011001110010000000011', '101011110110010100001000011110100000', '101101101011011000010010001001000101', '110011011101100101000000100100011010', '110100111110101000100001000010101100', '011110110110000010101101010010100000', '101011111001010100010000101101010000', '110101001111101001000010000000001111']
-color1="#66c2a6"
-color2="#fc8e62"
-color3="#8ea0cb"
-
-data = open("degeneracies_loop.txt", "r")
-tmp = {}
+data = open("configurations_loop.txt", "r")
+configurations = []
+configurations_pairs = []
+configurations_spins = []
 for row in data:
-    row = row.split(" ")
-    tmp[row[-1].replace("\n","")] = int(row[-2])
+    row = row.replace("\n", "")
+    configurations.append(row)
+    configurations_spins.append(row[:4])
+    configurations_pairs.append(row[4:8])
 
-degeneracy_states = []
-degeneracy_states_err = []
-for state in unique_strings:
-    degeneracy_states.append(tmp[state])
-    degeneracy_states_err.append(np.sqrt(tmp[state]))
-data.close()
-degeneracy_states = np.array(degeneracy_states)
-degeneracy_states_err = np.array(degeneracy_states_err)
 
-total_degeneracy = len(degeneracy_states)
-N = np.sum(degeneracy_states)
-print("Total number of samples")
-print(N)
-print("Total unique states")
-print(len(degeneracy_states))
+mapped_configurations_pairs = []
+for i in range(len(configurations_pairs)):
+    mapped_configurations_pairs.append(set_configurations_pairs.index(configurations_pairs[i]))
 
-xplot = np.zeros(len(degeneracy_states))
-uniform_samples = np.zeros(len(degeneracy_states))
-uniform_samples_err_p = np.zeros(len(degeneracy_states))
-uniform_samples_err_m = np.zeros(len(degeneracy_states))
-for i in range(len(degeneracy_states)):
-    xplot[i] = i
-    uniform_samples[i] = N/len(degeneracy_states)
-    uniform_samples_err_p[i] = N/len(degeneracy_states) + np.sqrt(N/len(degeneracy_states))
-    uniform_samples_err_m[i] = N/len(degeneracy_states) - np.sqrt(N/len(degeneracy_states))
+bins = [-0.5+i for i in range(max(mapped_configurations_pairs)+2)]
+ticks = [i for i in range(max(mapped_configurations_pairs)+1)]
 
-print("Mean QUBO = ", np.mean(degeneracy_states), " Std: ", np.std(degeneracy_states))
+plt.figure()
+counts, bins, fig = plt.hist(mapped_configurations_pairs, bins=bins)
+plt.errorbar(ticks, counts, yerr=np.sqrt(counts), fmt='none', color="tab:orange")
+plt.plot([bins[0], bins[-1]], [np.sum(counts)/len(ticks), np.sum(counts)/len(ticks)], '--', color='k')
 
-bins = [-0.5+i for i in range(total_degeneracy +1)]
-ticks = [i for i in range(total_degeneracy)]
-plt.figure(figsize=(5,2.5))
-plt.hist(ticks[:6], bins=bins,histtype='bar', color=color3, ec='black', weights=degeneracy_states[:6])
-plt.hist(ticks[6:], bins=bins,histtype='bar', color=color1, ec='black', weights=degeneracy_states[6:])
-plt.fill_between([bins[0], bins[total_degeneracy ]], [uniform_samples_err_p[0],uniform_samples_err_p[0]], [uniform_samples_err_m[0],uniform_samples_err_m[0]], color=color2, alpha=0.5)
-plt.plot([bins[0], bins[total_degeneracy ]], [uniform_samples[0],uniform_samples[0]], color=color2, alpha=0.75)
-plt.xlabel("Microstate", fontsize=9)
-plt.ylabel("Counts", fontsize=9)
-plt.xticks([i for i in range(total_degeneracy)], [str(i+1) for i in range(total_degeneracy)], fontsize=8)
-plt.yticks(fontsize=8)
-plt.savefig('Histogram_ergodicity_L2x2x2.png',dpi=300, bbox_inches = "tight")
+plt.xticks(ticks, [str(t+1) for t in ticks])
+plt.xlabel("microstates")
+plt.ylabel("N")
+plt.title("Histogram of pairs distributions")
+plt.savefig('Histogram_uniformity_pairs.png',dpi=300, bbox_inches = "tight")
 
+mapped_configurations_spins = []
+for i in range(len(configurations_spins)):
+    mapped_configurations_spins.append(set_configurations_spins.index(configurations_spins[i]))
+
+bins = [-0.5+i for i in range(max(mapped_configurations_spins)+2)]
+ticks = [i for i in range(max(mapped_configurations_spins)+1)]
+
+plt.figure()
+counts, bins, fig = plt.hist(mapped_configurations_spins, bins=bins)
+plt.errorbar(ticks, counts, yerr=np.sqrt(counts), fmt='none', color="tab:orange")
+plt.plot([bins[0], bins[-1]], [np.sum(counts)/len(ticks), np.sum(counts)/len(ticks)], '--', color='k')
+
+plt.xticks(ticks, [str(t+1) for t in ticks])
+plt.xlabel("microstates")
+plt.ylabel("N")
+plt.title("Histogram of spins distributions")
+plt.savefig('Histogram_uniformity_spins.png',dpi=300, bbox_inches = "tight")

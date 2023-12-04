@@ -8,7 +8,7 @@ sampler = EmbeddingComposite(DWaveSampler(solver={'qpu': True}))
 
 outputname = "Outputs_2000_loop.txt"
 out = open(outputname, 'a')
-for i in range(1000):
+for i in range(5000):
     results = sampler.sample_ising(h,J, annealing_time=2000)
     solution = np.array(list(results.record[0][0]))
     print("Energy = ", results.record[0][1])
