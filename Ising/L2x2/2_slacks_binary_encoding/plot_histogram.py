@@ -24,6 +24,7 @@ ticks = [i for i in range(max(mapped_configurations_pairs)+1)]
 
 plt.figure()
 counts, bins, fig = plt.hist(mapped_configurations_pairs, bins=bins)
+print(counts)
 plt.errorbar(ticks, counts, yerr=np.sqrt(counts), fmt='none', color="tab:orange")
 plt.plot([bins[0], bins[-1]], [np.sum(counts)/len(ticks), np.sum(counts)/len(ticks)], '--', color='k')
 
@@ -42,6 +43,7 @@ ticks = [i for i in range(max(mapped_configurations_spins)+1)]
 
 plt.figure()
 counts, bins, fig = plt.hist(mapped_configurations_spins, bins=bins)
+print(counts)
 plt.errorbar(ticks, counts, yerr=np.sqrt(counts), fmt='none', color="tab:orange")
 plt.plot([bins[0], bins[-1]], [np.sum(counts)/len(ticks), np.sum(counts)/len(ticks)], '--', color='k')
 
