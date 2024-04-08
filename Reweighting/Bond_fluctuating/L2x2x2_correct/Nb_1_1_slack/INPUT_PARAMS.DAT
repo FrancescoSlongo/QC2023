@@ -1,0 +1,9 @@
+Lattice_Dimensionality 3
+L 2
+L 2
+L 2
+Nbonds 1
+V_SA_flag   1
+V_L4_flag   0
+A_corn 0.5
+Nslack 1
