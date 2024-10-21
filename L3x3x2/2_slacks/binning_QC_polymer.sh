@@ -11,11 +11,11 @@ for nc in {12..15}; do
     folder="nc_${nc}.0_2_slack"
     echo $folder
     cd $folder
-    
+    pwd
     if [ -f $FILE ]; then
         echo "File $FILE exists."
         counter1=$((counter1+1))
-        sort $FILE | uniq -c | awk '{print $1}' >> a.txt
+        cat slacks.txt | awk '{a=substr($1,1,1); b=substr($1,2,1); c=a+2*b; print(c)}' | sort | uniq -c | awk '{print $1}' >> a.txt
         counter3=$((counter2+3))
         input_string="${counter2}   ${counter3}"
         while IFS= read -r line
