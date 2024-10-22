@@ -15,15 +15,15 @@ for nc in {12..15}; do
     if [ -f $FILE ]; then
         echo "File $FILE exists."
         counter1=$((counter1+1))
-        cat slacks.txt | awk '{a=substr($1,1,1); b=substr($1,2,1); c=a+2*b; print(c)}' | sort | uniq -c | awk '{print $1}' >> a.txt
+        #rm -f degeneracies.txt
+        #cat slacks.txt | awk '{a=substr($1,1,1); b=substr($1,2,1); c=a+2*b; print(c)}' | sort | uniq -c | awk '{print $1}' >> degeneracies.txt
         counter3=$((counter2+3))
         input_string="${counter2}   ${counter3}"
         while IFS= read -r line
         do
             input_string="${input_string}    ${line}" 
-        done < "a.txt"
+        done < "degeneracies.txt"
         input_string="${input_string}    1.0"
-        rm -f a.txt
         echo ${input_string} >> ${HomeDir}/tmp.txt
         counter2=$((counter2+1))
     else
