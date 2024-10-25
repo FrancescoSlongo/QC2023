@@ -24,16 +24,17 @@ for j in range(100):
 	keys= list(counter.keys())
 	keys.sort()
 	data=[]
-	for key in [13, 14, 15, 16]:
+	for key in [16, 15, 14, 13]:
 		if key in keys:
 			data.append(counter[key])
 		else:
 			data.append(0)
 	samples.append(data)
-print(samples)
+	
 samples=np.array(samples)
 mean=np.mean(samples, axis=0)
 std=np.std(samples, axis=0)
+print(mean, std)
 with open('Outputs.txt', 'w') as f:
 	for i in range(4):
 		f.write(f"{mean[i]} \pm {std[i]}\n")

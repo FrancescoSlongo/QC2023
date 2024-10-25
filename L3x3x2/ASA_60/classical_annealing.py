@@ -14,7 +14,7 @@ for j in range(100):
 	iteration=[]
 	for i in range(50):
 		E=0
-		while (E+416.25)>1e-3:
+		while (E+426.25)>1e-3:
 			results = sampler.sample_ising(h,J, num_reads=1)
 			E=results.record[0][1]
 		x=(results.record[0][0]+1)/2
@@ -24,13 +24,13 @@ for j in range(100):
 	keys= list(counter.keys())
 	keys.sort()
 	data=[]
-	for key in [13, 14, 15, 16]:
+	for key in [13,14, 15, 16]:
 		if key in keys:
 			data.append(counter[key])
 		else:
 			data.append(0)
 	samples.append(data)
-print(samples)
+
 samples=np.array(samples)
 mean=np.mean(samples, axis=0)
 std=np.std(samples, axis=0)
