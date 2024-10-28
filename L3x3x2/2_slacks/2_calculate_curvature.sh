@@ -11,4 +11,4 @@ rm -f slacks.txt
 touch slacks.txt
 while IFS= read -r line; do
   echo ${line: -2}>>slacks.txt
-done < "$1"
+done < "
