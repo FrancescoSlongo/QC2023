@@ -1,9 +1,228 @@
+Reading 7 energies
+Finished reading energies associated to   7 bins
+Finished reading histogram of batch   0  bin range:   0 to   3
+Finished reading histogram of batch   1  bin range:   1 to   4
+Finished reading histogram of batch   2  bin range:   2 to   5
+Finished reading histogram of batch   3  bin range:   3 to   6
+Finished reading batches.
+
+Iteration   0 Error convergence:   3.7517
+Reached convergence with  36 iterations and error 5.9637e-16
 # i  E(i)  W(i)  RMSF(W(i))
 # Note: Bins with zero entries will be defaulted to 1e-64
-  0     0.00000   0.039448  0.038135
-  1     1.00000     0.1359  0.049752
-  2     2.00000    0.30437  0.052468
-  3     3.00000    0.17415  0.036139
-  4     4.00000     0.2549  0.046032
-  5     5.00000   0.070314  0.034301
-  6     6.00000   0.020926   0.02504
+  0     0.00000    0.10174
+  1     1.00000   0.092305
+  2     2.00000    0.24431
+  3     3.00000     0.1975
+  4     4.00000    0.26971
+  5     5.00000    0.07197
+  6     6.00000   0.022466
+Macro-iteration 0
+Reached convergence with 134 iterations and error 8.5644e-16
+Macro-iteration 1
+Reached convergence with 127 iterations and error 8.6746e-16
+Macro-iteration 2
+Reached convergence with 126 iterations and error 7.1707e-16
+Macro-iteration 3
+Reached convergence with 126 iterations and error 5.8122e-16
+Macro-iteration 4
+Reached convergence with 122 iterations and error 9.5959e-16
+Macro-iteration 5
+Reached convergence with 121 iterations and error 7.682e-16
+Macro-iteration 6
+Reached convergence with 119 iterations and error 9.0881e-16
+Macro-iteration 7
+Reached convergence with 118 iterations and error 7.166e-16
+Macro-iteration 8
+Reached convergence with 114 iterations and error 9.8723e-16
+Macro-iteration 9
+Reached convergence with 114 iterations and error 8.6113e-16
+Macro-iteration 10
+Reached convergence with 112 iterations and error 8.5195e-16
+Macro-iteration 11
+Reached convergence with 112 iterations and error 6.7358e-16
+Macro-iteration 12
+Reached convergence with 109 iterations and error 8.5735e-16
+Macro-iteration 13
+Reached convergence with 108 iterations and error 9.5875e-16
+Macro-iteration 14
+Reached convergence with 107 iterations and error 5.9525e-16
+Macro-iteration 15
+Reached convergence with 104 iterations and error 9.0877e-16
+Macro-iteration 16
+Reached convergence with 104 iterations and error 7.165e-16
+Macro-iteration 17
+Reached convergence with 101 iterations and error 9.0877e-16
+Macro-iteration 18
+Reached convergence with 100 iterations and error 7.165e-16
+Macro-iteration 19
+Reached convergence with  98 iterations and error 9.0877e-16
+Macro-iteration 20
+Reached convergence with  96 iterations and error 9.7692e-16
+Macro-iteration 21
+Reached convergence with  95 iterations and error 9.447e-16
+Macro-iteration 22
+Reached convergence with  94 iterations and error 4.2583e-16
+Macro-iteration 23
+Reached convergence with  90 iterations and error 7.165e-16
+Macro-iteration 24
+Reached convergence with  90 iterations and error 9.5934e-16
+Macro-iteration 25
+Reached convergence with  88 iterations and error 9.5934e-16
+Macro-iteration 26
+Reached convergence with  86 iterations and error 9.5934e-16
+Macro-iteration 27
+Reached convergence with  84 iterations and error 7.8801e-16
+Macro-iteration 28
+Reached convergence with  84 iterations and error 9.6459e-16
+Macro-iteration 29
+Reached convergence with  82 iterations and error 5.811e-16
+Macro-iteration 30
+Reached convergence with  81 iterations and error 6.7354e-16
+Macro-iteration 31
+Reached convergence with  78 iterations and error 9.0877e-16
+Macro-iteration 32
+Reached convergence with  75 iterations and error 9.234e-16
+Macro-iteration 33
+Reached convergence with  74 iterations and error 9.7693e-16
+Macro-iteration 34
+Reached convergence with  73 iterations and error 7.165e-16
+Macro-iteration 35
+Reached convergence with  73 iterations and error 8.2881e-16
+Macro-iteration 36
+Reached convergence with  69 iterations and error 9.9681e-16
+Macro-iteration 37
+Reached convergence with  67 iterations and error 9.253e-16
+Macro-iteration 38
+Reached convergence with  66 iterations and error 9.7335e-16
+Macro-iteration 39
+Reached convergence with  64 iterations and error 7.165e-16
+Macro-iteration 40
+Reached convergence with  63 iterations and error 9.5934e-16
+Macro-iteration 41
+Reached convergence with  61 iterations and error 8.4153e-16
+Macro-iteration 42
+Reached convergence with  59 iterations and error 7.6813e-16
+Macro-iteration 43
+Reached convergence with  58 iterations and error 8.4153e-16
+Macro-iteration 44
+Reached convergence with  57 iterations and error 7.8465e-16
+Macro-iteration 45
+Reached convergence with  55 iterations and error 6.9175e-16
+Macro-iteration 46
+Reached convergence with  53 iterations and error 7.165e-16
+Macro-iteration 47
+Reached convergence with  52 iterations and error 6.3822e-16
+Macro-iteration 48
+Reached convergence with  52 iterations and error 5.2375e-16
+Macro-iteration 49
+Reached convergence with  49 iterations and error 8.3239e-16
+Macro-iteration 50
+Reached convergence with  46 iterations and error 7.8801e-16
+Macro-iteration 51
+Reached convergence with  45 iterations and error 9.6421e-16
+Macro-iteration 52
+Reached convergence with  43 iterations and error 9.9681e-16
+Macro-iteration 53
+Reached convergence with  41 iterations and error 8.4702e-16
+Macro-iteration 54
+Reached convergence with  39 iterations and error 9.234e-16
+Macro-iteration 55
+Reached convergence with  38 iterations and error 9.7693e-16
+Macro-iteration 56
+Reached convergence with  36 iterations and error 7.8465e-16
+Macro-iteration 57
+Reached convergence with  35 iterations and error 6.9175e-16
+Macro-iteration 58
+Reached convergence with  34 iterations and error 6.3273e-16
+Macro-iteration 59
+Reached convergence with  30 iterations and error 9.8242e-16
+Macro-iteration 60
+Reached convergence with  30 iterations and error 8.4702e-16
+Macro-iteration 61
+Reached convergence with  30 iterations and error 4.4046e-16
+Macro-iteration 62
+Reached convergence with  27 iterations and error 8.2332e-16
+Macro-iteration 63
+Reached convergence with  26 iterations and error 6.4926e-16
+Macro-iteration 64
+Reached convergence with  23 iterations and error 8.8044e-16
+Macro-iteration 65
+Reached convergence with  22 iterations and error 8.8234e-16
+Macro-iteration 66
+Reached convergence with  20 iterations and error 9.1427e-16
+Macro-iteration 67
+Reached convergence with  19 iterations and error 8.2714e-16
+Macro-iteration 68
+Reached convergence with  17 iterations and error 9.4113e-16
+Macro-iteration 69
+Reached convergence with  15 iterations and error 7.7338e-16
+Macro-iteration 70
+Reached convergence with  13 iterations and error 6.3273e-16
+Macro-iteration 71
+Reached convergence with  12 iterations and error 9.7693e-16
+Macro-iteration 72
+Reached convergence with  12 iterations and error 6.8817e-16
+Macro-iteration 73
+Reached convergence with  10 iterations and error 8.2332e-16
+Macro-iteration 74
+Reached convergence with   8 iterations and error 6.9175e-16
+Macro-iteration 75
+Reached convergence with   6 iterations and error 9.9681e-16
+Macro-iteration 76
+Reached convergence with   5 iterations and error 9.2865e-16
+Macro-iteration 77
+Reached convergence with   5 iterations and error 4.4046e-16
+Macro-iteration 78
+Reached convergence with   4 iterations and error 5.9526e-16
+Macro-iteration 79
+Reached convergence with   3 iterations and error 4.8295e-16
+Macro-iteration 80
+Reached convergence with   3 iterations and error 8.3239e-16
+Macro-iteration 81
+Reached convergence with   1 iterations and error 6.7354e-16
+Macro-iteration 82
+Reached convergence with   1 iterations and error 8.3239e-16
+Macro-iteration 83
+Reached convergence with   1 iterations and error 6.9175e-16
+Macro-iteration 84
+Reached convergence with   1 iterations and error 8.2881e-16
+Macro-iteration 85
+Reached convergence with   1 iterations and error 6.8817e-16
+Macro-iteration 86
+Reached convergence with   1 iterations and error 6.97e-16
+Macro-iteration 87
+Reached convergence with   1 iterations and error 6.0629e-16
+Macro-iteration 88
+Reached convergence with   1 iterations and error 5.5635e-16
+Macro-iteration 89
+Reached convergence with   1 iterations and error 4.8295e-16
+Macro-iteration 90
+Reached convergence with   1 iterations and error 1.5528e-16
+Macro-iteration 91
+Reached convergence with   1 iterations and error 1.5528e-16
+Macro-iteration 92
+Reached convergence with   1 iterations and error 1.5528e-16
+Macro-iteration 93
+Reached convergence with   1 iterations and error        0
+Macro-iteration 94
+Reached convergence with   1 iterations and error        0
+Macro-iteration 95
+Reached convergence with   1 iterations and error        0
+Macro-iteration 96
+Reached convergence with   1 iterations and error        0
+Macro-iteration 97
+Reached convergence with   1 iterations and error        0
+Macro-iteration 98
+Reached convergence with   1 iterations and error        0
+Macro-iteration 99
+Reached convergence with   1 iterations and error        0
+# i  E(i)  W(i)  RMSF(W(i))
+# Note: Bins with zero entries will be defaulted to 1e-64
+  0     0.00000     0.1025  0.057474
+  1     1.00000   0.092653  0.041447
+  2     2.00000    0.24713  0.048846
+  3     3.00000    0.19734  0.037554
+  4     4.00000    0.26586  0.046992
+  5     5.00000   0.072178  0.035341
+  6     6.00000   0.022343   0.02679
