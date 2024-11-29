@@ -3,7 +3,7 @@ import numpy as np
 
 for i in range(50):
     sampler = LeapHybridSampler()
-    lim=6
+    lim=9
     h = np.loadtxt('h.txt')
     J = np.loadtxt('J.txt')
     outputname = "Outputs_tlim_"+str(lim)+".txt"
